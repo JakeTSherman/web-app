@@ -1,9 +1,9 @@
 Company.destroy_all
-Contact.destroy_all
+Person.destroy_all
 
 apple = Company.new({ name: "Apple", city: "Cupertino", state: "CA" })
 apple.save
-tim = Contact.new({ 
+tim = Person.new({ 
   first_name: "Tim", 
   last_name: "Cook", 
   email: "tim@apple.com", 
@@ -11,7 +11,7 @@ tim = Contact.new({
   company_id: apple.id
 })
 tim.save
-craig = Contact.new({ 
+craig = Person.new({ 
   first_name: "Craig", 
   last_name: "Federighi", 
   email: "craig@apple.com", 
@@ -22,7 +22,7 @@ craig.save
 
 amazon = Company.new({ name: "Amazon", city: "Seattle", state: "WA" })
 amazon.save
-andy = Contact.new({ 
+andy = Person.new({ 
   first_name: "Andy", 
   last_name: "Jassy", 
   email: "andy@amazon.com", 
@@ -33,7 +33,7 @@ andy.save
 
 tesla = Company.new({ name: "Tesla", city: "Palo Alto", state: "CA" })
 tesla.save
-elon = Contact.new({ 
+elon = Person.new({ 
   first_name: "Elon", 
   last_name: "Musk", 
   email: "elon@tesla.com", 
@@ -42,4 +42,4 @@ elon = Contact.new({
 })
 elon.save
 
-puts "There are now #{Company.all.count} companies and #{Contact.all.count} contacts."
+puts "There are now #{Company.all.count} companies and #{Person.all.count} contacts."
